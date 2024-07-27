@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather app</title>
+    <link rel="stylesheet" href="/styles.css">
+    <script defer src="/script.js"></script>
+</head>
+<body>
+    <h1>Weather App</h1>
+    <div class="main-container">
+        <section class="location-container">
+            <h3>Enter a city name</h3>
+            <input type="text" class="js-city-input" autofocus placeholder="Ex., Delhi,Chennai, Bangalore, Mumbai">
+            <button class="search-btn js-search-btn">Serach</button>
+            <div class="hr-line-container">
+                <hr>
+                <span>Or</span>
+                <hr>
+            </div>
+            <button class="current-location-btn">Use Current Location</button>
+        </section>
+        <Section class="result-container">
+            <div class="result-forecast">
+                <h2>City Name <span class="no-wrap">(yyyy-mm-dd)</span></h2>
+                <p>Temperature : --</p>
+                <p>Wind : --</p>
+                <p>Humidity : --</p>
+            </div>
+            <div class="result-forecast-img-container">
+                <img src="" alt="weather-img">
+                <p>weather description</p>
+            </div>
+        </Section>
+    </div>
+    <div class="forecast-container">
+        <h2>4-Days Forecast</h2>
+        <ul class="forecasts">
+            <li class="forecast">
+                <p>(yyyy-mm-dd)</p>
+                <img src="" alt="forecast-img">
+                <p>Temperature : --</p>
+                <p>Wind : --</p>
+                <p>Humidity : --</p>
+            </li>
+            <li class="forecast">
+                <p>(yyyy-mm-dd)</p>
+                <img src="" alt="forecast-img">
+                <p>Temperature : --</p>
+                <p>Wind : --</p>
+                <p>Humidity : --</p>
+            </li>
+            <li class="forecast">
+                <p>(yyyy-mm-dd)</p>
+                <img src="" alt="forecast-img">
+                <p>Temperature : --</p>
+                <p>Wind : --</p>
+                <p>Humidity : --</p>
+            </li>
+            <li class="forecast">
+                <p>(yyyy-mm-dd)</p>
+                <img src="" alt="forecast-img">
+                <p>Temperature : --</p>
+                <p>Wind : --</p>
+                <p>Humidity : --</p>
+            </li>
+        </ul>
+    </div>
+    <div class="credits">
+        <p>@Developed by <span>Sakthi</span> | All rights reserved</p>
+    </div>
+</body>
+</html>
