@@ -18,7 +18,7 @@ function createWeatherReport(cityName,forecastList) {
                     <p>Humidity : ${forecastList[0].main.humidity}%</p>
                   </div>
                   <div class="result-forecast-img-container">
-                    <img src="http://openweathermap.org/img/w/${forecastList[0].weather[0].icon}.png" alt="weather-img">
+                    <img src="https://openweathermap.org/img/w/${forecastList[0].weather[0].icon}.png" alt="weather-img">
                     <p>${forecastList[0].weather[0].description}</p>
                   </div>
                 `
@@ -29,7 +29,7 @@ function createWeatherReport(cityName,forecastList) {
     for (let i = 1; i < forecastList.length - 1;i++) {
         const forecastHtml = `<li class="forecast">
                             <p>${forecastList[i].dt_txt.split(" ")[0]}</p>
-                            <img src="http://openweathermap.org/img/w/${forecastList[i].weather[0].icon}.png" alt="forecast-img">
+                            <img src="https://openweathermap.org/img/w/${forecastList[i].weather[0].icon}.png" alt="forecast-img">
                             <p>Temperature : ${(Number(forecastList[i].main.temp) - 273.15).toFixed(2)}C</p>
                             <p>Wind : ${forecastList[0].wind.speed} M/S</p>
                             <p>Humidity : ${forecastList[i].main.humidity}%</p>
@@ -40,7 +40,7 @@ function createWeatherReport(cityName,forecastList) {
 }
 
 async function getWeatherDetails(lat,lon) {
-    const WEATHER_API_URL = `http://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&appid=${API_KEY}`;
+    const WEATHER_API_URL = `https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&appid=${API_KEY}`;
    
     const response = await fetch(WEATHER_API_URL);
     if (response.status !== 200 ) alert("Unexpected error occured while fetching weather details!");
@@ -63,7 +63,7 @@ async function getCityCoordinates(city) {
         return
     }
 
-    const response = await fetch(`http://api.openweathermap.org/geo/1.0/direct?q=${city}&limit=1&appid=${API_KEY}`);
+    const response = await fetch(`https://api.openweathermap.org/geo/1.0/direct?q=${city}&limit=1&appid=${API_KEY}`);
     if (response.status !== 200 ) alert("Unexpected error occured enter the right city name");
     
     const data = await response.json();
